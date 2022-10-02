@@ -44,10 +44,14 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
+    data = "pa = ${widget.transactionDetails.pa} pn = ${widget.transactionDetails.pn} am = ${widget.transactionDetails.am}";
+
     super.initState();
   }
 
-  Future<String> initiateTransaction({UPITransactionDetails? transactionDetails, QuantUPIPaymentApps? app}) async {
+  Future<String> initiateTransaction(
+      {UPITransactionDetails? transactionDetails,
+      QuantUPIPaymentApps? app}) async {
     Quantupi upi = Quantupi(
       receiverUpiId: transactionDetails!.pa!,
       receiverName: transactionDetails!.pn!,
