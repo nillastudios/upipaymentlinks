@@ -20,6 +20,8 @@ void main() {
   String? pn = url.queryParameters["pn"];
   double? amount = double.parse(url.queryParameters["am"] ?? "0");
 
+  print(url.toString());
+
   UPITransactionDetails transactionDetails =
       UPITransactionDetails(pa: pa, pn: pn, am: amount);
 
