@@ -44,7 +44,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    data = "pa = ${widget.transactionDetails.pa} pn = ${widget.transactionDetails.pn} am = ${widget.transactionDetails.am}";
+    data =
+        "pa = ${widget.transactionDetails.pa} pn = ${widget.transactionDetails.pn} am = ${widget.transactionDetails.am}";
+    print(widget.transactionDetails.pa);
 
     super.initState();
   }
